@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps) {
         <script 
           type="text/javascript"
           id="vwoCode"
-          dangerous lySetInnerHTML= {{
+          dangerouslySetInnerHTML= {{
             __html: `
             window._vwo_code || (function() {
               var account_id=735612,
