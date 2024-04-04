@@ -30,7 +30,6 @@ export default function RootLayout({ children }: LayoutProps) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- Start VWO Async SmartCode -->
         <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
         <script 
           type="text/javascript"
@@ -48,7 +47,6 @@ export default function RootLayout({ children }: LayoutProps) {
             `,
           }}
         />
-        <!-- End VWO Async SmartCode -->
       </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300">
         <Providers>
