@@ -34,11 +34,8 @@ export default function RootLayout({ children }: LayoutProps) {
         <script 
           type="text/javascript"
           id="vwoCode"
-        dangerouslySetInnerHTML = {{__html: `const params = new URLSearchParams(window.location.search);
-const accId = parseInt(params.get("id"));
-const accountId = accId || 735612;
-console.log("Account-Id -->", accountId);window._vwo_code || (function() {
-              var account_id=accountId || 735612,
+        dangerouslySetInnerHTML = {{__html: `window._vwo_code || (function() {
+              var account_id=735612,
               version=2.1,
               settings_tolerance=2000,
               hide_element='body',
