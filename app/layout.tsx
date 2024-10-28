@@ -6,7 +6,7 @@ import Providers from '~/components/atoms/Providers';
 import Header from '~/components/widgets/Header';
 import Announcement from '~/components/widgets/Announcement';
 import Footer2 from '~/components/widgets/Footer2';
-import {VWOScript} from './VWOScript.tsx';
+import {VWOScript} from './VWOScript';
 
 import { Inter as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
