@@ -20,7 +20,7 @@ import {
   contentHomeTwo,
   faqs2Home,
   featuresHome,
-  heroHome,
+  heroProps,
   pricingHome,
   socialProofHome,
   stepsHome,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <Hero {...heroHome} />
+      <Hero {...heroProps} />
       <SocialProof {...socialProofHome} />
       <Features {...featuresHome} />
       <Content {...contentHomeOne} />

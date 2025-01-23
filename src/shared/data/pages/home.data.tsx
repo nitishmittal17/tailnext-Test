@@ -36,12 +36,21 @@ import typescriptLogo from '~/assets/images/typescript-logo.png';
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
 import gasImg from '~/assets/images/gas.jpg';
+import {VWOFME, type VWOFMEReturn} from '~/../app/VWOFME';
 
 // Hero data on Home page *******************
-export const heroHome: HeroProps = {
-  title: (
+export async function heroProps(): Promise<HeroProps> {
+
+  const { homePageFlag } = await VWOFME();
+  let textValueForAbTest = '';
+  if (homePageFlag.isEnabled()) {
+    textValueForAbTest = homePageFlag.getVariable('headline', 'default_value');
+  }
+
+  return {
+    title: (
     <>
-      Free template for <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
+      {textValueForAbTest} <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
       <span className="sm:whitespace-nowrap">Tailwind CSS</span>
     </>
   ),
@@ -70,7 +79,7 @@ export const heroHome: HeroProps = {
   image: {
     src: heroImg,
     alt: 'Hero TailNext',
-  },
+  }}
 };
 
 // SocialProof data on Home page *******************

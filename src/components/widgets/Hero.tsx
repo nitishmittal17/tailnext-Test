@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
+import { heroProps } from '~/shared/data/pages/home.data';
 import CTA from '../common/CTA';
 
-const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: HeroProps) => {
+const Hero = async() => {
+  const { title, subtitle, tagline, callToAction, callToAction2, image }: HeroProps = await heroProps();
   return (
     <section id="heroOne">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
