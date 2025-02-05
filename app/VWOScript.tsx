@@ -5,7 +5,9 @@ export const VWOScript = () => {
         <script 
           type="text/javascript"
           id="vwoCode"
-        dangerouslySetInnerHTML = {{__html: `window._vwo_code || (function() {
+        dangerouslySetInnerHTML = {{__html: `
+if(window && window.location) {console.log('still running normally')};
+window._vwo_code || (function() {
               var account_id=735612,
               version=2.1,
               settings_tolerance=2000,
