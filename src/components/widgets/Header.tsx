@@ -93,35 +93,19 @@ const Header = () => {
                           isDropdownOpen[index] ? 'block' : 'md:hidden'
                         } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md dark:md:bg-slate-900/90`}
                       >
-                        {links.map(({ label: label2, href: href2 }, index2) => {
-  const isBlogLink = label2.toLowerCase() === 'blog'; // Case-insensitive check
-
-  return (
-    <li key={`item-link-${index2}`}>
-      {isBlogLink ? ( // Conditional rendering
-        <a
-          className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"
-          href={href2 as string}
-          onClick={() =>
-            isToggleMenuOpen ? handleToggleMenuOnClick() : handleCloseDropdownOnClick(index)
-          }
-        >
-          {label2}
-        </a>
-      ) : (
-        <Link
-          className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"
-          href={href2 as string}
-          onClick={() =>
-            isToggleMenuOpen ? handleToggleMenuOnClick() : handleCloseDropdownOnClick(index)
-          }
-        >
-          {label2}
-        </Link>
-      )}
-    </li>
-  );
-})}
+                        {links.map(({ label: label2, href: href2 }, index2) => (
+                          <li key={`item-link-${index2}`}>
+                            <Link
+                              className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"
+                              href={href2 as string}
+                              onClick={() =>
+                                isToggleMenuOpen ? handleToggleMenuOnClick() : handleCloseDropdownOnClick(index)
+                              }
+                            >
+                              {label2}
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </>
                   ) : (
