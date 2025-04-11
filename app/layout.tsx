@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps) {
             accountId="735612" 
             type="ASYNC"
             linkAttributes={{
-              crossorigin: ""
+              crossOrigin: ""
             }}
         />
         </head>
