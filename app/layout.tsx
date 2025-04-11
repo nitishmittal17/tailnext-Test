@@ -35,9 +35,7 @@ export default function RootLayout({ children }: LayoutProps) {
             accountId="735612" 
             type="ASYNC"
             linkAttributes={{
-              id: "testLinkId",
-              className: "vwo-script",
-              rel: "preload"
+              crossorigin: ""
             }}
         />
         </head>
