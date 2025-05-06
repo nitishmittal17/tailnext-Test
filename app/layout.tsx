@@ -65,6 +65,10 @@ export default function RootLayout({ children }: LayoutProps) {
       document.addEventListener("cookieyes_banner_load", updateVWOConsent);
 
       if (typeof getCkyConsent === "function") updateVWOConsent();
+window._vwo_pc_custom = {
+        a: 100,
+        t: 100
+    };
     `,
   }}
 ></script>
