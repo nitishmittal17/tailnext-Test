@@ -38,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps) {
               crossOrigin: ""
             }}
         />
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3e8ee1ff-0a20-427a-8203-3fafbd138e58"  type="text/javascript"></script>
+        <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/9d18ee6563ae902bfee888d5/script.js"></script> <!-- End cookieyes banner -->
         </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300">
         <Providers>
