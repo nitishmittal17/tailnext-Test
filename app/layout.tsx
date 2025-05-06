@@ -38,6 +38,7 @@ export default function RootLayout({ children }: LayoutProps) {
               crossOrigin: ""
             }}
         />
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3e8ee1ff-0a20-427a-8203-3fafbd138e58"  type="text/javascript"></script>
         </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300">
         <Providers>
