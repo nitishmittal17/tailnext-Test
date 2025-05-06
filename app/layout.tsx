@@ -1,4 +1,5 @@
-import { Metadata, Script } from 'next';
+import { Metadata } from 'next';
+import Script from 'next/script';
 
 import { SITE } from '~/config.js';
 
