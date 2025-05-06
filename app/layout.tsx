@@ -43,6 +43,30 @@ export default function RootLayout({ children }: LayoutProps) {
               crossOrigin: ""
             }}
         />
+        <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.VWO = window.VWO || [];
+      window.VWO.init = window.VWO.init || (state => (window.VWO.consentState = state));
+
+      const consentCategory = 'analytics'; // Replace with the correct category ID
+
+      function updateVWOConsent() {
+        const consentData = typeof getCkyConsent === "function" ? getCkyConsent() : null;
+        if (!consentData?.isUserActionCompleted) {
+          VWO.init(2); // Consent pending
+        } else {
+          VWO.init(consentData.categories?.[consentCategory] ? 1 : 3);
+        }
+      }
+
+      document.addEventListener("cookieyes_consent_update", updateVWOConsent, { once: true });
+      document.addEventListener("cookieyes_banner_load", updateVWOConsent, { once: true });
+
+      if (typeof getCkyConsent === "function") updateVWOConsent();
+    `,
+  }}
+></script>
         </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300">
         <Providers>
