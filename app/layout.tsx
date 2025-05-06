@@ -61,8 +61,8 @@ export default function RootLayout({ children }: LayoutProps) {
         }
       }
 
-      document.addEventListener("cookieyes_consent_update", updateVWOConsent, { once: true });
-      document.addEventListener("cookieyes_banner_load", updateVWOConsent, { once: true });
+      document.addEventListener("cookieyes_consent_update", updateVWOConsent);
+      document.addEventListener("cookieyes_banner_load", updateVWOConsent);
 
       if (typeof getCkyConsent === "function") updateVWOConsent();
     `,
