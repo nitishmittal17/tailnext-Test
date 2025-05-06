@@ -31,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/9d18ee6563ae902bfee888d5/script.js" />
         <VWOScript 
             accountId="4000477" 
             type="ASYNC"
@@ -38,7 +39,6 @@ export default function RootLayout({ children }: LayoutProps) {
               crossOrigin: ""
             }}
         />
-        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/9d18ee6563ae902bfee888d5/script.js" />
         </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300">
         <Providers>
