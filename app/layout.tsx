@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata, Script } from 'next';
 
 import { SITE } from '~/config.js';
 
@@ -30,8 +30,12 @@ export default function RootLayout({ children }: LayoutProps) {
     <html lang="en" className={`motion-safe:scroll-smooth 2xl:text-[24px] ${customFont.variable} font-sans`}>
       <head>
         <meta charSet="utf-8" />
+        <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/9d18ee6563ae902bfee888d5/script.js"
+          strategy="beforeInteractive" // or "lazyOnload" if it's non-essential
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/9d18ee6563ae902bfee888d5/script.js" />
         <VWOScript 
             accountId="4000477" 
             type="ASYNC"
