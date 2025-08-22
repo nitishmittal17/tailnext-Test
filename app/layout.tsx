@@ -38,40 +38,12 @@ export default function RootLayout({ children }: LayoutProps) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <VWOScript 
-            accountId="4000477" 
+            accountId="735612" 
             type="ASYNC"
             linkAttributes={{
               crossOrigin: ""
             }}
         />
-        <script
-  dangerouslySetInnerHTML={{
-    __html: `
-      window.VWO = window.VWO || [];
-      window.VWO.init = window.VWO.init || (state => (window.VWO.consentState = state));
-
-      const consentCategory = 'analytics'; // Replace with the correct category ID
-
-      function updateVWOConsent() {
-        const consentData = typeof getCkyConsent === "function" ? getCkyConsent() : null;
-        if (!consentData?.isUserActionCompleted) {
-          VWO.init(2); // Consent pending
-        } else {
-          VWO.init(consentData.categories?.[consentCategory] ? 1 : 3);
-        }
-      }
-
-      document.addEventListener("cookieyes_consent_update", updateVWOConsent);
-      document.addEventListener("cookieyes_banner_load", updateVWOConsent);
-
-      if (typeof getCkyConsent === "function") updateVWOConsent();
-window._vwo_pc_custom = {
-        a: 100,
-        t: 100
-    };
-    `,
-  }}
-></script>
         </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300">
         <Providers>
