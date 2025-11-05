@@ -6,7 +6,7 @@ export const VWOScript = () => {
   useEffect(() => {
     (function() {
       var vwoScript = document.createElement('script');
-      vwoScript.src = 'https://dev.visualwebsiteoptimizer.com/lib/1162388.js';
+      vwoScript.src = 'https://glbdacdn.vwo.com/lib/1162388.js';
       vwoScript.id = 'vwoCode';
       vwoScript.async = true;
       vwoScript.referrerPolicy = 'no-referrer-when-downgrade';
