@@ -7,7 +7,7 @@ import Providers from '~/components/atoms/Providers';
 import Header from '~/components/widgets/Header';
 import Announcement from '~/components/widgets/Announcement';
 import Footer2 from '~/components/widgets/Footer2';
-import { VWOScript } from 'vwo-smartcode-nextjs';
+import { VWOScript } from './VWOScript';
 
 import { Inter as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
@@ -37,15 +37,9 @@ export default function RootLayout({ children }: LayoutProps) {
           strategy="beforeInteractive" // or "lazyOnload" if it's non-essential
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <VWOScript 
-            accountId="735612" 
-            type="ASYNC"
-            linkAttributes={{
-              crossOrigin: ""
-            }}
-        />
         </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300">
+        <VWOScript />
         <Providers>
           <Announcement />
           <Header />
